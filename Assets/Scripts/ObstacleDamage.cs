@@ -8,10 +8,7 @@ public class ObstacleDamage : MonoBehaviour
     {
         var droneController = other.GetComponentInParent<DroneController>();
 
-        if (droneController == null)
-        {
-            return;
-        }
+        if (!droneController) return;
 
         droneController.TakeDamage(_damage);
         Destroy(gameObject);

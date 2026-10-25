@@ -12,10 +12,7 @@ public class DroneController : MonoBehaviour
     {
         _currentHealth -= amount;
 
-        if (_currentHealth > MinimumHealth)
-        {
-            return;
-        }
+        if (_currentHealth > MinimumHealth) return;
         
         Destroy(gameObject);
     }

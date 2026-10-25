@@ -11,16 +11,15 @@ public class ObstacleSpawner : MonoBehaviour
     {
         _spawnIntervalTimer += Time.deltaTime;
 
-        if (_spawnIntervalTimer >= _spawnInterval)
-        {
-            SpawnObstacle();
-            _spawnIntervalTimer = 0f;
-        }
+        if (_spawnIntervalTimer < _spawnInterval) return;
+
+        SpawnObstacle();
+        _spawnIntervalTimer = 0f;
     }
 
     private void SpawnObstacle()
     {
-        Vector3 randomPosition = new Vector3(
+        Vector3 randomPosition = new (
             Random.Range(-5f, 5f),
             Random.Range(1f, 5f),
             0f
