@@ -17,7 +17,11 @@ public class DroneController : MonoBehaviour
     {
         _currentHealth -= amount;
 
+        Debug.Log($"Vida actual: {_currentHealth}");
+        
         if (_currentHealth > MinimumHealth) return;
+        
+        Debug.Log("BOOM!");
         
         Destroy(gameObject);
     }
