@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -318,12 +319,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16995147, y: 0, z: 0, w: 0.9854524}
-  m_LocalPosition: {x: 0, y: 5.86, z: -6.09}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalRotation: {x: 0.16995147, y: -0, z: -0, w: 0.9854524}
+  m_LocalPosition: {x: 0, y: 5.0600004, z: -6.09}
+  m_LocalScale: {x: 1, y: 1.1121969, z: 0.9439014}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1985315010}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 19.57, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -369,6 +370,20 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17078f394e8d2e458e85fa6bdb33249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowTarget
+  _target: {fileID: 1985315010}
+  _offset: {x: 0, y: 3, z: -9}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,8 +671,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.13, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 330585546}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1985315011
@@ -700,6 +714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DroneController
   _speed: 5
+  _maxHealth: 20
 --- !u!1 &2050818551
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,6 +767,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 330585546}
   - {fileID: 1985315010}
   - {fileID: 8004433}
   - {fileID: 2050818552}
